@@ -1,0 +1,407 @@
+.about-hero {
+  position: relative;
+  min-height: 52vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 170px 0 90px;
+  background:
+    linear-gradient(180deg, rgba(0, 0, 0, 0.54) 0%, rgba(0, 0, 0, 0.72) 100%),
+    url("images/about-builders-in-bangor-north-wales.jpg") center center / cover no-repeat;
+}
+
+.about-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at center, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0) 44%);
+  pointer-events: none;
+}
+
+.about-hero-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 980px;
+  text-align: center;
+}
+
+.about-hero-kicker {
+  margin: 0 0 18px;
+  color: #d8d8d8;
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.about-hero h1 {
+  margin: 0 0 20px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: clamp(2.9rem, 6vw, 5.8rem);
+  line-height: 0.95;
+  letter-spacing: -0.05em;
+  color: #fff;
+}
+
+.about-hero-text {
+  max-width: 860px;
+  margin: 0 auto;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 1.1rem;
+  line-height: 1.85;
+}
+
+.about-intro-section {
+  background: #050505;
+  color: #fff;
+}
+
+.about-intro-grid {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.95fr) minmax(0, 1.05fr);
+  gap: 72px;
+  align-items: start;
+}
+
+.about-intro-title h2 {
+  margin: 0;
+  font-size: clamp(2.5rem, 5vw, 5rem);
+  line-height: 0.94;
+  letter-spacing: -0.04em;
+  color: #fff;
+}
+
+.about-intro-title h2 span {
+  display: block;
+  color: var(--silver, #9a9a9a);
+}
+
+.about-intro-copy p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.74);
+  line-height: 1.9;
+  font-size: 1.04rem;
+}
+
+.about-intro-copy p + p {
+  margin-top: 18px;
+}
+
+.about-intro-mini-card {
+  margin-top: 36px;
+  padding: 26px 28px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.about-intro-mini-card h3 {
+  margin: 0 0 12px;
+  font-size: 1.85rem;
+  line-height: 1.05;
+  color: #fff;
+}
+
+.about-story-section {
+  background: #050505;
+  color: #fff;
+  padding-top: 24px;
+}
+
+.about-story-grid {
+  display: grid;
+  grid-template-columns: minmax(320px, 0.95fr) minmax(0, 1.05fr);
+  gap: 66px;
+  align-items: center;
+  margin-bottom: 42px;
+}
+
+.about-story-image {
+  overflow: hidden;
+  border-radius: 24px;
+  box-shadow: var(--shadow-soft);
+}
+
+.about-story-image img {
+  width: 100%;
+  height: 640px;
+  object-fit: cover;
+  display: block;
+}
+
+.about-story-content h2 {
+  margin: 0 0 20px;
+  font-size: clamp(2.6rem, 5vw, 5.1rem);
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+  color: #fff;
+}
+
+.about-story-content h2 span {
+  display: block;
+  color: var(--silver-light, #d3d3d3);
+}
+
+.about-story-content p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.85;
+  font-size: 1.04rem;
+}
+
+.about-story-content p + p {
+  margin-top: 16px;
+}
+
+.about-specialisms-title {
+  margin: 34px 0 16px;
+  font-size: 1.9rem;
+  color: #fff;
+  line-height: 1.08;
+}
+
+.about-specialisms-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.about-specialisms-list span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 48px;
+  padding: 0 16px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.88);
+  border-radius: 12px;
+  font-weight: 500;
+}
+
+.about-stats-slider {
+  position: relative;
+  width: 100%;
+}
+
+.about-stats-viewport {
+  width: 100%;
+}
+
+.about-stats-panel {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 22px;
+  padding: 0;
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.about-stat-item {
+  min-height: 250px;
+  padding: 28px 24px;
+  display: grid;
+  align-content: start;
+  gap: 16px;
+  background: linear-gradient(180deg, #1d1d1f 0%, #151517 100%);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 10px;
+  box-shadow: var(--shadow-soft);
+  box-sizing: border-box;
+}
+
+.about-stat-icon {
+  width: 62px;
+  height: 62px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #f3f3f3;
+  font-size: 1.2rem;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.about-stat-item strong {
+  font-size: clamp(2rem, 3vw, 3rem);
+  line-height: 1;
+  color: #ffffff;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.about-stat-item span {
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.75;
+  font-size: 0.98rem;
+}
+
+.about-stats-arrow {
+  display: none;
+}
+
+.about-cta-section {
+  background: #050505;
+  color: #fff;
+  padding-top: 0;
+}
+
+.about-cta-panel {
+  padding: 48px 36px;
+  border-radius: 28px;
+  background:
+    linear-gradient(180deg, rgba(20, 20, 20, 0.86) 0%, rgba(10, 10, 10, 0.92) 100%),
+    url("images/hero-1.jpg") center center / cover no-repeat;
+  text-align: center;
+  box-shadow: var(--shadow-soft);
+}
+
+.about-cta-kicker {
+  margin: 0 0 14px;
+  color: var(--silver-light, #d3d3d3);
+  letter-spacing: 0.14em;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.about-cta-panel h2 {
+  margin: 0 0 18px;
+  font-size: clamp(2.3rem, 4.5vw, 4.5rem);
+  line-height: 0.96;
+  letter-spacing: -0.04em;
+  color: #fff;
+}
+
+.about-cta-panel p {
+  max-width: 840px;
+  margin: 0 auto;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.85;
+  font-size: 1.04rem;
+}
+
+.about-cta-actions {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 26px;
+}
+
+@media (max-width: 1180px) {
+  .about-intro-grid,
+  .about-story-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .about-story-image img {
+    height: 460px;
+  }
+
+  .about-stats-panel {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .about-hero {
+    min-height: auto;
+    padding: 132px 0 60px;
+  }
+
+  .about-hero h1 {
+    font-size: 2.7rem;
+    line-height: 1;
+  }
+
+  .about-hero-text {
+    font-size: 1rem;
+    line-height: 1.75;
+  }
+
+  .about-intro-title,
+  .about-intro-copy,
+  .about-story-content {
+    text-align: center;
+  }
+
+  .about-story-image img {
+    height: 320px;
+  }
+
+  .about-specialisms-list {
+    justify-content: center;
+  }
+
+  .about-stats-slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 0 56px;
+    box-sizing: border-box;
+  }
+
+  .about-stats-viewport {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .about-stats-panel {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 0;
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding: 0;
+  }
+
+  .about-stats-panel::-webkit-scrollbar {
+    display: none;
+  }
+
+  .about-stat-item {
+    flex: 0 0 100%;
+    min-width: 100%;
+    width: 100%;
+    max-width: 100%;
+    min-height: auto;
+    margin: 0;
+    scroll-snap-align: start;
+  }
+
+  .about-stats-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 42px;
+    height: 42px;
+    border: 0;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+  }
+
+  .about-stats-arrow-prev {
+    left: 6px;
+  }
+
+  .about-stats-arrow-next {
+    right: 6px;
+  }
+
+  .about-cta-panel {
+    padding: 36px 22px;
+  }
+}

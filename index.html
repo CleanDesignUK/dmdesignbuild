@@ -7,25 +7,37 @@
   <meta name="description" content="DM Design & Build LTD provides extensions, bespoke garden rooms, loft conversions, garage conversions, home alterations and project management in Bangor and nearby areas." />
   <meta name="robots" content="index, follow" />
   <meta name="author" content="DM Design & Build LTD" />
-  <meta name="theme-color" content="#0f1115" />
+  <meta name="theme-color" content="#111111" />
   <meta name="format-detection" content="telephone=yes" />
 
   <link rel="canonical" href="https://www.example.com/" />
+
+   <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="images/DM-design-and-build-logo-150.jpg" />
+  <link rel="apple-touch-icon" href="images/DM-design-and-build-logo-150.jpg" />
+
+  <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Extensions, Loft & Garage Conversions in Bangor | DM Design & Build LTD" />
   <meta property="og:description" content="Local building services in Bangor and nearby areas, including extensions, bespoke garden rooms, loft conversions, garage conversions and project management." />
   <meta property="og:url" content="https://www.example.com/" />
-  <meta property="og:image" content="https://www.example.com/images/og-home.jpg" />
+  <meta property="og:image" content="https://www.example.com/images/DM-design-and-build-logo-400.jpg" />
   <meta property="og:site_name" content="DM Design & Build LTD" />
+
+  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Extensions, Loft & Garage Conversions in Bangor | DM Design & Build LTD" />
   <meta name="twitter:description" content="Extensions, garden rooms, loft conversions, garage conversions and project management in Bangor and nearby areas." />
-  <meta name="twitter:image" content="https://www.example.com/images/og-home.jpg" />
+  <meta name="twitter:image" content="https://www.example.com/images/DM-design-and-build-logo-400.jpg" />
+
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="index.css" />
 
   <script type="application/ld+json">
   {
@@ -58,299 +70,528 @@
   </script>
 </head>
 <body>
-
-  <header class="site-header">
-    <div class="container nav-wrap">
-      <a href="index.html" class="brand" aria-label="DM Design & Build LTD home">
-        <span class="brand-badge">DM</span>
-        <span class="brand-copy">
-          <strong>DM Design &amp; Build LTD</strong>
-          <small>Bangor Building Company</small>
-        </span>
-      </a>
-
-      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-
-      <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
-        <a href="index.html" class="nav-link active">Home</a>
-        <a href="about.html" class="nav-link">About</a>
-        <a href="services.html" class="nav-link">Services</a>
-        <a href="contact.html" class="nav-link">Contact</a>
-      </nav>
-
-      <a href="tel:07835827283" class="nav-cta">Call Now</a>
-    </div>
-  </header>
-
+ <div id="site-navbar"></div>
   <main>
-    <section class="hero">
-      <div class="container hero-shell">
-        <div class="hero-overlay"></div>
+<section class="hero">
+  <div class="hero-overlay"></div>
 
-        <div class="hero-grid">
-          <div class="hero-copy">
-            <p class="eyebrow">Extensions, loft conversions and garage conversions in Bangor</p>
-            <h1>Design and build work that adds space, value and confidence to your home.</h1>
-            <p class="hero-text">
-              DM Design &amp; Build LTD helps homeowners in Bangor and nearby areas with extensions, bespoke garden rooms, loft conversions, garage conversions, home alterations and project management.
-            </p>
+  <div class="container hero-inner">
+   <div class="hero-copy">
+  <p class="eyebrow">Extensions, Loft Conversions & Garage Conversions in Bangor</p>
 
-            <div class="hero-actions">
-              <a href="#quote-form" class="btn btn-primary">Get a Quote</a>
-              <a href="tel:07835827283" class="btn btn-secondary">Call 07835 827283</a>
-            </div>
+  <h1>
+    Bangor Home Extensions,
+    <span class="hero-accent">Loft & Garage Conversions</span>
+  </h1>
 
-            <ul class="hero-list">
-              <li>Extensions</li>
-              <li>Bespoke Garden Rooms</li>
-              <li>Loft Conversions</li>
-              <li>Garage Conversions</li>
-              <li>Project Management</li>
-            </ul>
+  <p class="hero-text">
+    DM Design & Build LTD delivers home extensions, bespoke garden rooms, loft conversions,
+    garage conversions, home alterations and project management in Bangor and nearby areas.
+    If you are looking for trusted builders in Bangor for extra space, better layout and
+    practical design-led improvement work.
+  </p>
+</div>
+
+    <div class="hero-form-wrap" id="quote-form">
+      <form class="quote-form hero-form" action="#" method="post">
+        <div class="field-row">
+          <div class="field-group">
+            <label for="name">Full name</label>
+            <input id="name" name="name" type="text" placeholder="Your name" required />
+          </div>
+          <div class="field-group">
+            <label for="phone">Phone number</label>
+            <input id="phone" name="phone" type="tel" placeholder="Your phone number" required />
+          </div>
+        </div>
+
+        <div class="field-row">
+          <div class="field-group">
+            <label for="email">Email address</label>
+            <input id="email" name="email" type="email" placeholder="Your email" required />
+          </div>
+          <div class="field-group">
+            <label for="area">Area</label>
+            <input id="area" name="area" type="text" placeholder="Bangor, Menai Bridge, Caernarfon..." required />
+          </div>
+        </div>
+
+        <div class="field-row field-row-service">
+          <div class="field-group service-field">
+            <label for="service">Service needed</label>
+            <select id="service" name="service" required>
+              <option value="">Choose a service</option>
+              <option>Extensions</option>
+              <option>Bespoke Garden Rooms</option>
+              <option>Loft Conversions</option>
+              <option>Garage Conversions</option>
+              <option>Home Alterations</option>
+              <option>Project Management</option>
+            </select>
           </div>
 
-          <aside class="quote-card" id="quote-form">
-            <p class="card-label">Request a Quote</p>
-            <h2>Tell us about your project</h2>
+          <div class="field-group submit-field">
+            <label class="label-hidden" for="hero-submit">Submit</label>
+            <button id="hero-submit" type="submit" class="btn btn-primary hero-submit">
+              Start Your Project
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
 
-            <form class="quote-form" action="#" method="post">
-              <div class="field-row">
-                <div class="field-group">
-                  <label for="name">Full name</label>
-                  <input id="name" name="name" type="text" placeholder="Your name" required />
-                </div>
-                <div class="field-group">
-                  <label for="phone">Phone number</label>
-                  <input id="phone" name="phone" type="tel" placeholder="Your phone number" required />
-                </div>
-              </div>
+<section class="section about-work-section">
+  <div class="container">
+    <div class="about-work-panel">
+      <div class="about-work-bg"></div>
 
-              <div class="field-row">
-                <div class="field-group">
-                  <label for="email">Email address</label>
-                  <input id="email" name="email" type="email" placeholder="Your email" required />
-                </div>
-                <div class="field-group">
-                  <label for="area">Area</label>
-                  <input id="area" name="area" type="text" placeholder="Bangor, Menai Bridge, Caernarfon..." required />
-                </div>
-              </div>
+      <div class="about-work-top">
+        <div class="about-work-heading">
+          <h2>
+            30+ Years of Quality
+            <span>Building Work</span>
+            <small>Across Bangor &amp; Nearby Areas</small>
+          </h2>
+        </div>
 
-              <div class="field-group">
-                <label for="service">Service needed</label>
-                <select id="service" name="service" required>
-                  <option value="">Choose a service</option>
-                  <option>Extensions</option>
-                  <option>Bespoke Garden Rooms</option>
-                  <option>Loft Conversions</option>
-                  <option>Garage Conversions</option>
-                  <option>Home Alterations</option>
-                  <option>Project Management</option>
-                </select>
-              </div>
-
-              <div class="field-group">
-                <label for="message">Project details</label>
-                <textarea id="message" name="message" rows="5" placeholder="Tell us what you are planning."></textarea>
-              </div>
-
-              <button type="submit" class="btn btn-primary btn-full">Request My Quote</button>
-            </form>
-          </aside>
+        <div class="about-work-intro">
+          <p>
+            DM Design &amp; Build LTD provides home extensions, bespoke garden rooms,
+            loft conversions, garage conversions, home alterations and project
+            management for homeowners in Bangor and nearby areas. We focus on
+            practical, high-quality building work that improves space, function
+            and long-term value.
+          </p>
         </div>
       </div>
-    </section>
 
-    <section class="section intro-section">
-      <div class="container intro-box">
-        <div>
-          <p class="section-tag">Built for local enquiries</p>
-          <h2>A cleaner homepage with stronger local trust and conversion points.</h2>
+      <div class="about-work-grid">
+        <div class="about-work-main">
+          <div class="about-work-image about-work-image-large">
+            <img src="images/house-extension-bangor-anglesey-north-wales.jpg" alt="Home extension and design and build work in Bangor" />
+          </div>
+
+          <div class="image-badge image-badge-right">
+            <strong>Qualified Team & Trusted by Locals</strong>
+            <span>Experienced builders and project-led support. Serving Bangor and nearby areas with dependable workmanship</span>
+          </div>
         </div>
+
+        <div class="about-work-side">
+          <div class="about-work-copy">
+            <h3>Experienced, professional and built around the work people actually search for</h3>
+            <p>
+              We work with homeowners looking for builders in Bangor for home
+              extensions, loft conversions, garage conversions and garden room
+              projects, as well as home alterations and project management support.
+              Our service area includes Bangor, Menai Bridge, Caernarfon, Bethesda,
+              Llanfairfechan, Beaumaris, Penmaenmawr and Llanberis.
+            </p>
+            <p>
+              Whether you need extra living space, a better internal layout or a
+              carefully managed improvement project, we bring experience,
+              professionalism and dependable communication from first enquiry
+              through to completion.
+            </p>
+            <p class="about-work-note">
+              From house extensions and loft conversions to garage conversions and
+              bespoke garden rooms, we deliver professional building services with a
+              clear process, experienced project oversight and a strong focus on finish.
+            </p>
+          </div>
+                  <a href="about.html" class="btn btn-primary services-about-cta">About Us</a>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="section services-section-ref">
+  <div class="container">
+    <div class="services-ref-top">
+      <div class="services-ref-copy">
+        <p class="section-tag">Our Services</p>
+        <h2>Our Specialised Services</h2>
         <p>
-          This homepage is structured to support SEO, GEO and enquiry generation around Bangor first, while also targeting nearby areas that matter for local search visibility.
+          We provide practical building services across Bangor and nearby areas,
+          with project-led support, dependable workmanship and a clear process
+          from enquiry through to completion.
         </p>
       </div>
-    </section>
 
-    <section class="section page-section">
-      <div class="container">
-        <div class="section-head">
-          <p class="section-tag">Explore the Website</p>
-          <h2>Every important page is introduced clearly on the homepage.</h2>
-        </div>
+      <a href="services.html" class="services-ref-viewall">View Services <span>→</span></a>
+    </div>
 
-        <div class="page-grid">
-          <a class="info-card" href="about.html">
-            <span class="card-number">01</span>
-            <h3>About</h3>
-            <p>Learn more about DM Design &amp; Build LTD, our approach and our local focus around Bangor.</p>
-            <span class="card-link">View About</span>
-          </a>
-
-          <a class="info-card" href="services.html">
-            <span class="card-number">02</span>
-            <h3>Services</h3>
-            <p>Explore extensions, bespoke garden rooms, loft conversions, garage conversions, home alterations and project management.</p>
-            <span class="card-link">View Services</span>
-          </a>
-
-          <a class="info-card" href="contact.html">
-            <span class="card-number">03</span>
-            <h3>Contact</h3>
-            <p>Get in touch by phone, email or quick quote form and start the conversation about your project.</p>
-            <span class="card-link">View Contact</span>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section services-section">
-      <div class="container">
-        <div class="section-head section-head-flex">
-          <div>
-            <p class="section-tag">Our Services</p>
-            <h2>Built around the work homeowners actually search for.</h2>
-          </div>
-          <a href="services.html" class="btn btn-outline">All Services</a>
-        </div>
-
-        <div class="services-grid">
-          <article class="service-card">
-            <h3>Extensions</h3>
-            <p>Create the extra living space your home needs with a practical extension project.</p>
-          </article>
-          <article class="service-card">
-            <h3>Bespoke Garden Rooms</h3>
-            <p>Add a flexible standalone space for work, guests, hobbies or everyday use.</p>
-          </article>
-          <article class="service-card">
-            <h3>Loft Conversions</h3>
-            <p>Turn unused loft space into a valuable and comfortable part of your home.</p>
-          </article>
-          <article class="service-card">
-            <h3>Garage Conversions</h3>
-            <p>Transform underused garages into practical, liveable internal space.</p>
-          </article>
-          <article class="service-card">
-            <h3>Home Alterations</h3>
-            <p>Improve flow, function and layout with alterations that suit how you live.</p>
-          </article>
-          <article class="service-card">
-            <h3>Project Management</h3>
-            <p>Keep the process clearer and better organised from planning through delivery.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section areas-section">
-      <div class="container areas-box">
-        <div>
-          <p class="section-tag">Areas We Cover</p>
-          <h2>Bangor first, with nearby areas that strengthen local reach.</h2>
+    <div class="services-ref-grid">
+      <a href="services.html" class="services-ref-card">
+        <span class="services-ref-number">01</span>
+        <div class="services-ref-content">
+          <h3>Property Project Management</h3>
           <p>
-            We are based in Bangor and also target Menai Bridge, Caernarfon, Bethesda, Llanfairfechan, Beaumaris, Penmaenmawr and Llanberis.
+            Coordinate your building project with clearer scheduling, organised
+            trades and reliable oversight from start to finish.
           </p>
         </div>
-
-        <div class="areas-grid">
-          <span>Bangor</span>
-          <span>Menai Bridge</span>
-          <span>Caernarfon</span>
-          <span>Bethesda</span>
-          <span>Llanfairfechan</span>
-          <span>Beaumaris</span>
-          <span>Penmaenmawr</span>
-          <span>Llanberis</span>
+        <span class="services-ref-btn">Manage My Project</span>
+        <div class="services-ref-bg-image">
+          <img src="images/hero-1.jpg" alt="Property project management background" />
         </div>
-      </div>
-    </section>
+        <div class="services-ref-hover-image">
+          <img src="images/property-project-management-bangor-north-wales.png" alt="Property project management service" />
+        </div>
+      </a>
 
-    <section class="section secondary-quote">
-      <div class="container secondary-wrap">
-        <div class="secondary-copy">
-          <p class="section-tag">Ready to Start?</p>
-          <h2>Get a quote for your project in Bangor or a nearby area.</h2>
+      <a href="services.html" class="services-ref-card">
+        <span class="services-ref-number">02</span>
+        <div class="services-ref-content">
+          <h3>Extensions</h3>
           <p>
-            Whether you are planning an extension, loft conversion, garage conversion or bespoke garden room, send us your details and we will be in touch.
+            Create the extra living space your home needs with a practical and
+            well-managed extension project.
           </p>
-          <div class="hero-actions">
-            <a href="tel:07835827283" class="btn btn-primary">Call Now</a>
-            <a href="contact.html" class="btn btn-outline">Contact Page</a>
+        </div>
+        <span class="services-ref-btn">Plan My Extension</span>
+        <div class="services-ref-bg-image">
+          <img src="images/hero-1.jpg" alt="House extension background" />
+        </div>
+        <div class="services-ref-hover-image">
+          <img src="images/home-extension-bangor-north-wales.jpg" alt="House extension service" />
+        </div>
+      </a>
+
+      <a href="services.html" class="services-ref-card">
+        <span class="services-ref-number">03</span>
+        <div class="services-ref-content">
+          <h3>Bespoke Garden Rooms</h3>
+          <p>
+            Add a flexible standalone space for work, guests, hobbies or
+            everyday use.
+          </p>
+        </div>
+        <span class="services-ref-btn">Explore Garden Rooms</span>
+        <div class="services-ref-bg-image">
+          <img src="images/hero-1.jpg" alt="Garden rooms background" />
+        </div>
+        <div class="services-ref-hover-image">
+          <img src="images/garden-room-bangor-north-wales.jpg" alt="Bespoke garden room service" />
+        </div>
+      </a>
+
+      <a href="services.html" class="services-ref-card">
+        <span class="services-ref-number">04</span>
+        <div class="services-ref-content">
+          <h3>Loft Conversions</h3>
+          <p>
+            Turn unused loft space into a valuable and comfortable part of your home.
+          </p>
+        </div>
+        <span class="services-ref-btn">View Loft Options</span>
+        <div class="services-ref-bg-image">
+          <img src="images/hero-1.jpg" alt="Loft conversion background" />
+        </div>
+        <div class="services-ref-hover-image">
+          <img src="images/loft-conversion-bangor-north-wales.jpg" alt="Loft conversion service" />
+        </div>
+      </a>
+
+      <a href="services.html" class="services-ref-card">
+        <span class="services-ref-number">05</span>
+        <div class="services-ref-content">
+          <h3>Garage Conversions</h3>
+          <p>
+            Transform underused garages into practical, liveable internal space.
+          </p>
+        </div>
+        <span class="services-ref-btn">Convert My Garage</span>
+        <div class="services-ref-bg-image">
+          <img src="images/hero-1.jpg" alt="Garage conversion background" />
+        </div>
+        <div class="services-ref-hover-image">
+          <img src="images/garage-conversion-bangor-north-wales.jpg" alt="Garage conversion service" />
+        </div>
+      </a>
+
+      <a href="services.html" class="services-ref-card">
+        <span class="services-ref-number">06</span>
+        <div class="services-ref-content">
+          <h3>Home Alterations</h3>
+          <p>
+            Improve flow, layout and function with alterations that suit how you live.
+          </p>
+        </div>
+        <span class="services-ref-btn">Improve My Layout</span>
+        <div class="services-ref-bg-image">
+          <img src="images/hero-1.jpg" alt="Home alterations background" />
+        </div>
+        <div class="services-ref-hover-image">
+          <img src="images/house-alteration-bangor-north-wales.jpg" alt="Home alterations service" />
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section service-highlight-section">
+  <div class="container service-highlight-grid">
+    <div class="service-highlight-image">
+      <img src="images/builder-in-bangor-house-renovation-alteration-north-wales.jpg" alt="DM Design & Build project management and building work" />
+    </div>
+
+    <div class="service-highlight-content">
+      <p class="service-highlight-tag">Bangor & Nearby Areas</p>
+
+<h2 class="service-highlight-title">
+  Builders in Bangor
+  <small>For Extensions &amp; Conversions</small>
+</h2>
+
+<p class="service-highlight-text">
+  DM Design &amp; Build LTD provides project management, house extensions, loft conversions,
+  garage conversions and home alterations in Bangor, Beaumaris, Menai Bridge, Caernarfon
+  and nearby areas. We help homeowners create more space, improve layout and manage
+  building work with a clearer process from start to finish.
+</p>
+
+<a href="gallery.html" class="btn btn-primary service-highlight-gallery-btn">
+  See Recent Projects
+</a>
+    </div>
+  </div>
+</section>
+
+<section class="section service-areas-section">
+  <div class="container">
+    <div class="service-areas-head">
+      <p class="service-areas-kicker">Areas We Serve</p>
+      <h2>Builders in Bangor & Nearby Areas</h2>
+
+    </div>
+
+    <div class="service-areas-chips">
+      <a href="contact.html">Bangor</a>
+      <a href="contact.html">Menai Bridge</a>
+      <a href="contact.html">Beaumaris</a>
+      <a href="contact.html">Caernarfon</a>
+      <a href="contact.html">Bethesda</a>
+      <a href="contact.html">Llanberis</a>
+      <a href="contact.html">Llanfairfechan</a>
+      <a href="contact.html">Penmaenmawr</a>
+      <a href="contact.html">Y Felinheli</a>
+      <a href="contact.html">Llandygai</a>
+      <a href="contact.html">Llangefni</a>
+      <a href="contact.html">Gaerwen</a>
+    </div>
+
+    <div class="service-areas-copy">
+      <p>
+        We work with homeowners in Bangor and across nearby parts of
+        Gwynedd and Anglesey. Our core local service areas
+        include Bangor, Menai Bridge, Beaumaris, Caernarfon, Bethesda, Llanberis,
+        Llanfairfechan, Penmaenmawr, Y Felinheli, Llandygai, Llangefni and Gaerwen.
+      </p>
+
+      <p>
+        If you are searching for builders in Bangor, house extensions in Bangor,
+        loft conversions near Bangor, garage conversions near Menai Bridge or
+        project management for home improvements in Bangor and nearby areas,
+        DM Design &amp; Build LTD provides practical building support with a clear process from first enquiry to completion.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section faq-section">
+  <div class="container faq-grid">
+    <div class="faq-intro">
+      <p class="faq-kicker">FAQ</p>
+      <h2>Your Questions Answered</h2>
+      <p class="faq-lead">
+        Answers to common questions about extensions, loft conversions, garage conversions,
+        home alterations, bespoke garden rooms and project management in Bangor and nearby areas.
+      </p>
+
+    </div>
+
+    <div class="faq-list" role="list">
+      <details class="faq-item" open>
+        <summary>
+          <span>What building services do you provide in Bangor and nearby areas?</span>
+          <span class="faq-icon"></span>
+        </summary>
+        <div class="faq-answer">
+          <p>
+            DM Design &amp; Build LTD provides <strong>extensions</strong>, <strong>bespoke garden rooms</strong>,
+            <strong>loft conversions</strong>, <strong>garage conversions</strong>, <strong>home alterations</strong>
+            and <strong>project management</strong> for homeowners in Bangor and nearby areas including
+            Menai Bridge, Caernarfon, Beaumaris, Bethesda and surrounding locations.
+          </p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          <span>Do you cover areas near Bangor such as Menai Bridge and Caernarfon?</span>
+          <span class="faq-icon"></span>
+        </summary>
+        <div class="faq-answer">
+          <p>
+            Yes. We are based in Bangor and regularly work in nearby areas such as
+            <strong>Menai Bridge</strong>, <strong>Caernarfon</strong>, <strong>Beaumaris</strong>,
+            <strong>Bethesda</strong>, <strong>Llanberis</strong>, <strong>Llanfairfechan</strong>
+            and other nearby parts of Gwynedd and Anglesey.
+          </p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          <span>Can you manage the whole project from start to finish?</span>
+          <span class="faq-icon"></span>
+        </summary>
+        <div class="faq-answer">
+          <p>
+            Yes. Our <strong>property project management</strong> service helps homeowners keep
+            building work organised with clearer scheduling, coordination and communication
+            throughout the project, from initial planning through to completion.
+          </p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          <span>Do you handle house extensions, loft conversions and garage conversions?</span>
+          <span class="faq-icon"></span>
+        </summary>
+        <div class="faq-answer">
+          <p>
+            Yes. We carry out <strong>house extensions</strong>, <strong>loft conversions</strong>,
+            <strong>garage conversions</strong> and other home improvement work designed to create
+            more usable space, improve layout and add long-term value to your property.
+          </p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          <span>How do I get a quote for a building project in Bangor?</span>
+          <span class="faq-icon"></span>
+        </summary>
+        <div class="faq-answer">
+          <p>
+            You can <a href="contact.html">contact us here</a> to tell us about your project, or call
+            <a href="tel:07835827283">07835 827283</a>. We can discuss your location, the type of work
+            you need and the next steps for your quote.
+          </p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          <span>What is the best way to contact DM Design &amp; Build LTD?</span>
+          <span class="faq-icon"></span>
+        </summary>
+        <div class="faq-answer">
+          <p>
+            The quickest way is to use the <a href="contact.html">contact page</a> or call
+            <a href="tel:07835827283">07835 827283</a>. You can also email
+            <a href="mailto:dmdesignandbuildltd@gmail.com">dmdesignandbuildltd@gmail.com</a>
+            with details about your planned extension, conversion or alteration project.
+          </p>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="section final-cta-section">
+  <div class="container">
+    <div class="final-cta-panel">
+      <div class="final-cta-bg"></div>
+
+      <div class="final-cta-grid">
+        <div class="final-cta-copy">
+          <p class="final-cta-kicker">Expert Builders in Bangor</p>
+
+          <h2>
+            House Extensions & Garage Conversions in Bangor
+          </h2>
+
+          <p class="final-cta-text">
+            House extensions, loft conversions, garage conversions,
+            bespoke garden rooms and home alterations in Bangor and nearby areas. If you need more
+            space, better layout and a smoother build process, we are ready to help.
+          </p>
+
+          <p class="final-cta-text final-cta-text-secondary">
+            Speak to our team today for a free quote and clear advice on your building project.
+          </p>
+
+          <div class="final-cta-call">
+            <span class="final-cta-call-label">
+              <i class="bi bi-telephone-fill"></i>
+              Call DM Design &amp; Build LTD
+            </span>
+            <a href="tel:07835827283" class="final-cta-phone">07835 827283</a>
           </div>
         </div>
 
-        <div class="secondary-card">
-          <form class="quote-form" action="#" method="post">
-            <div class="field-group">
-              <label for="name2">Full name</label>
-              <input id="name2" name="name" type="text" placeholder="Your name" required />
-            </div>
+        <div class="final-cta-form-wrap">
+          <div class="final-cta-form-card">
+            <h3>Request a Free Quote</h3>
 
-            <div class="field-group">
-              <label for="phone2">Phone number</label>
-              <input id="phone2" name="phone" type="tel" placeholder="Your phone number" required />
-            </div>
+           <form class="quote-form final-cta-form" action="#" method="post">
+  <div class="field-group">
+    <label for="cta-name">Full name</label>
+    <input id="cta-name" name="name" type="text" placeholder="Your name" required />
+  </div>
 
-            <div class="field-group">
-              <label for="service2">Service needed</label>
-              <select id="service2" name="service" required>
-                <option value="">Choose a service</option>
-                <option>Extensions</option>
-                <option>Bespoke Garden Rooms</option>
-                <option>Loft Conversions</option>
-                <option>Garage Conversions</option>
-                <option>Home Alterations</option>
-                <option>Project Management</option>
-              </select>
-            </div>
+  <div class="field-group">
+    <label for="cta-email">Email address</label>
+    <input id="cta-email" name="email" type="email" placeholder="Your email address" required />
+  </div>
 
-            <div class="field-group">
-              <label for="message2">Project details</label>
-              <textarea id="message2" name="message" rows="4" placeholder="Briefly describe your project"></textarea>
-            </div>
+  <div class="field-group">
+    <label for="cta-phone">Phone number</label>
+    <input id="cta-phone" name="phone" type="tel" placeholder="Your phone number" required />
+  </div>
 
-            <button type="submit" class="btn btn-primary btn-full">Request a Callback</button>
-          </form>
+  <div class="field-row">
+    <div class="field-group">
+      <label for="cta-area">Area</label>
+      <input id="cta-area" name="area" type="text" placeholder="Bangor, Menai Bridge..." required />
+    </div>
+
+    <div class="field-group">
+      <label for="cta-service">Service needed</label>
+      <select id="cta-service" name="service" required>
+        <option value="">Choose a service</option>
+        <option>Extensions</option>
+        <option>Bespoke Garden Rooms</option>
+        <option>Loft Conversions</option>
+        <option>Garage Conversions</option>
+        <option>Home Alterations</option>
+        <option>Project Management</option>
+      </select>
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-primary btn-full">Get My Building Quote</button>
+</form>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
+
   </main>
 
-  <script>
-    const toggle = document.querySelector('.nav-toggle');
-    const nav = document.querySelector('.site-nav');
-
-    if (toggle && nav) {
-      toggle.addEventListener('click', () => {
-        const open = nav.classList.toggle('open');
-        toggle.setAttribute('aria-expanded', String(open));
-      });
-    }
-
-    document.querySelectorAll('.quote-form').forEach((form) => {
-      form.addEventListener('submit', (event) => {
-        const phoneInput = form.querySelector('input[type="tel"]');
-        if (phoneInput) {
-          const digitsOnly = phoneInput.value.replace(/\D/g, '');
-          if (/([0-9])\1\1\1/.test(digitsOnly)) {
-            event.preventDefault();
-            alert('Please enter a valid phone number without too many repeated digits.');
-            phoneInput.focus();
-            return;
-          }
-        }
-
-        event.preventDefault();
-        alert("Thank you. We've received your enquiry and will be in touch soon.");
-        form.reset();
-      });
-    });
-  </script>
+  <div id="site-footer"></div>
+  <script src="app.js"></script>
 </body>
 </html>
