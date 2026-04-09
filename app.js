@@ -419,3 +419,37 @@ document.addEventListener("DOMContentLoaded", () => {
     if (distance > 0) showPrev();
   }, { passive: true });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  initTestimonialSlider();
+});
+
+function initTestimonialSlider() {
+  const track = document.getElementById("testimonialsTrack");
+  const prevBtn = document.querySelector(".testimonials-prev");
+  const nextBtn = document.querySelector(".testimonials-next");
+
+  if (!track || !prevBtn || !nextBtn) return;
+  if (window.innerWidth > 760) return;
+
+  const getScrollAmount = () => {
+    const card = track.querySelector(".testimonial-card");
+    if (!card) return track.clientWidth;
+    const gap = 14;
+    return card.getBoundingClientRect().width + gap;
+  };
+
+  prevBtn.addEventListener("click", () => {
+    track.scrollBy({
+      left: -getScrollAmount(),
+      behavior: "smooth"
+    });
+  });
+
+  nextBtn.addEventListener("click", () => {
+    track.scrollBy({
+      left: getScrollAmount(),
+      behavior: "smooth"
+    });
+  });
+}

@@ -1,0 +1,558 @@
+:root {
+  --service-individual-bg-soft: #0b0b0c;
+  --service-individual-panel: #121214;
+  --service-individual-panel-2: #17181a;
+  --service-individual-muted: rgba(255, 255, 255, 0.76);
+  --service-individual-line: rgba(255, 255, 255, 0.08);
+  --service-individual-line-strong: rgba(255, 255, 255, 0.14);
+  --service-individual-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
+  --service-individual-shadow-soft: 0 14px 34px rgba(0, 0, 0, 0.18);
+  --service-cream: #ece7db;
+  --service-warm-line: rgba(236, 231, 219, 0.18);
+}
+
+.service-page-hero,
+.service-intro-section,
+.service-statement-section,
+.service-detail-section,
+.service-process-section,
+.service-benefits-section,
+.service-customer-section,
+.testimonials-section,
+.service-areas-section,
+.faq-section,
+.services-final-cta-section {
+  background: #050505;
+  color: #fff;
+}
+
+.section-head-center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.service-page-hero {
+  padding: 152px 0 88px;
+  background:
+    linear-gradient(180deg, rgba(8, 8, 10, 0.84) 0%, rgba(8, 8, 10, 0.94) 100%),
+    url("images/hero-1.jpg") center center / cover no-repeat;
+}
+
+.service-page-hero-inner {
+  text-align: center;
+}
+
+.service-page-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 18px;
+  margin: 0 0 18px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.14);
+  background: rgba(255,255,255,0.05);
+  color: #d7d7d7;
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.service-page-hero h1 {
+  max-width: 1080px;
+  margin: 0 auto 22px;
+  font-size: clamp(2.9rem, 6vw, 5.9rem);
+  line-height: 0.96;
+  letter-spacing: -0.05em;
+  color: #fff;
+  text-transform: none;
+}
+
+.service-page-hero-text {
+  max-width: 930px;
+  margin: 0 auto;
+  font-size: 1.08rem;
+  line-height: 1.85;
+  color: rgba(255,255,255,0.84);
+}
+
+.service-page-hero-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 30px;
+}
+
+.service-page-hero-media {
+  max-width: 980px;
+  margin: 46px auto 0;
+  border-radius: 30px;
+  overflow: hidden;
+  border: 1px solid var(--service-individual-line);
+  box-shadow: var(--service-individual-shadow);
+}
+
+.service-page-hero-media img {
+  width: 100%;
+  height: clamp(280px, 48vw, 560px);
+  object-fit: cover;
+}
+
+.service-intro-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
+  gap: 28px;
+  align-items: start;
+}
+
+.service-intro-copy h2,
+.service-statement-wrap h2,
+.service-benefits-card h2 {
+  margin: 0 0 18px;
+  font-size: clamp(2.3rem, 5vw, 4.3rem);
+  line-height: 1.02;
+  letter-spacing: -0.04em;
+  color: #fff;
+  text-transform: none;
+}
+
+.service-intro-copy p {
+  margin: 0 0 16px;
+  color: var(--service-individual-muted);
+  line-height: 1.82;
+  font-size: 1.04rem;
+}
+
+.service-intro-points {
+  display: grid;
+  gap: 16px;
+}
+
+.service-intro-card,
+.service-customer-card {
+  padding: 26px;
+  border-radius: 24px;
+  background: linear-gradient(180deg, #171819 0%, #101112 100%);
+  border: 1px solid var(--service-individual-line);
+  box-shadow: var(--service-individual-shadow-soft);
+}
+
+.service-intro-card span,
+.service-customer-card span {
+  width: 54px;
+  height: 54px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+  background: #0c0c0d;
+  border: 1px solid rgba(255,255,255,0.07);
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+.service-intro-card h3,
+.service-customer-card h3,
+.service-needed-box h3,
+.testimonial-card h3 {
+  margin: 0 0 12px;
+  font-size: 1.45rem;
+  line-height: 1.1;
+  color: #fff;
+  text-transform: none;
+}
+
+.service-intro-card p,
+.service-customer-card p {
+  margin: 0;
+  color: var(--service-individual-muted);
+  line-height: 1.75;
+}
+
+.service-statement-section {
+  padding-top: 40px;
+}
+
+.service-statement-wrap {
+  max-width: 1080px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.service-statement-wrap h2 {
+  max-width: 980px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.service-statement-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 26px;
+  margin-top: 36px;
+}
+
+.service-statement-icon {
+  min-width: 170px;
+  text-align: center;
+}
+
+.service-statement-icon span {
+  width: 82px;
+  height: 82px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid var(--service-warm-line);
+  color: #d7d7d7;
+  font-size: 1.45rem;
+}
+
+.service-statement-icon p {
+  margin: 0;
+  color: rgba(255,255,255,0.84);
+  line-height: 1.55;
+}
+
+.service-detail-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(300px, 0.95fr);
+  gap: 34px;
+  align-items: center;
+}
+
+.service-detail-copy p {
+  margin: 0 0 18px;
+  color: var(--service-individual-muted);
+  line-height: 1.82;
+  font-size: 1.04rem;
+}
+
+.service-needed-box {
+  margin-top: 28px;
+  padding: 28px;
+  border-radius: 26px;
+  background: linear-gradient(180deg, #161718 0%, #101112 100%);
+  border: 1px solid var(--service-individual-line);
+  box-shadow: var(--service-individual-shadow-soft);
+}
+
+.service-needed-box ul,
+.service-benefits-card ul {
+  margin: 0;
+  padding-left: 20px;
+  display: grid;
+  gap: 12px;
+}
+
+.service-needed-box li,
+.service-benefits-card li {
+  color: var(--service-individual-muted);
+  line-height: 1.72;
+}
+
+.service-detail-image {
+  border-radius: 28px;
+  overflow: hidden;
+  border: 1px solid var(--service-individual-line);
+  box-shadow: var(--service-individual-shadow);
+}
+
+.service-detail-image img {
+  width: 100%;
+  height: 100%;
+  min-height: 420px;
+  object-fit: cover;
+}
+
+.service-process-grid {
+  max-width: 1060px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px 28px;
+}
+
+.service-process-card {
+  position: relative;
+  padding: 36px 26px 24px;
+  border-radius: 24px;
+  background: #ebebeb;
+  color: #111;
+}
+
+.service-process-number {
+  position: absolute;
+  top: -12px;
+  left: 18px;
+  min-width: 62px;
+  min-height: 40px;
+  padding: 0 14px;
+  border-radius: 16px 16px 18px 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #ededed;
+  color: #ff6a00;
+  font-size: 1.05rem;
+  font-weight: 800;
+}
+
+.service-process-card h3 {
+  margin: 0 0 12px;
+  color: #111;
+  font-size: 1.8rem;
+  line-height: 1.08;
+  text-transform: none;
+}
+
+.service-process-card p {
+  margin: 0;
+  color: rgba(17,17,17,0.76);
+  line-height: 1.7;
+  font-size: 1.03rem;
+}
+
+.service-benefits-panel {
+  position: relative;
+  padding-top: 16px;
+}
+
+.service-benefits-image {
+  border-radius: 28px;
+  overflow: hidden;
+  border: 1px solid var(--service-individual-line);
+}
+
+.service-benefits-image img {
+  width: 100%;
+  height: clamp(320px, 42vw, 520px);
+  object-fit: cover;
+}
+
+.service-benefits-card {
+  max-width: 460px;
+  margin: -88px auto 0;
+  padding: 30px;
+  border-radius: 28px;
+  background: rgba(233, 233, 233, 0.98);
+  box-shadow: 0 18px 38px rgba(0,0,0,0.2);
+}
+
+.service-benefits-card h2 {
+  margin-bottom: 18px;
+  font-size: clamp(1.9rem, 3vw, 2.7rem);
+  color: #111;
+}
+
+.service-benefits-card li {
+  color: rgba(17,17,17,0.8);
+}
+
+.service-customer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.testimonials-slider-wrap {
+  position: relative;
+}
+
+.testimonials-viewport {
+  overflow: hidden;
+}
+
+.testimonials-track {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.testimonial-card {
+  padding: 28px;
+  border-radius: 24px;
+  background: linear-gradient(180deg, #171819 0%, #101112 100%);
+  border: 1px solid var(--service-individual-line);
+  box-shadow: var(--service-individual-shadow-soft);
+  height: 100%;
+}
+
+.testimonial-stars {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 18px;
+  color: #d7d7d7;
+}
+
+.testimonial-card p {
+  margin: 0 0 18px;
+  color: var(--service-individual-muted);
+  line-height: 1.82;
+  font-size: 1rem;
+}
+
+.testimonial-card h3 {
+  margin-bottom: 6px;
+  font-size: 1.15rem;
+}
+
+.testimonial-card span {
+  color: rgba(255,255,255,0.58);
+  font-size: 0.94rem;
+}
+
+.testimonials-arrow {
+  display: none;
+}
+
+.services-final-cta-form textarea,
+.services-final-cta-form input,
+.services-final-cta-form select {
+  font-family: inherit;
+}
+
+.honeypot-field {
+  position: absolute !important;
+  left: -9999px !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+@media (max-width: 1180px) {
+  .service-intro-grid,
+  .service-detail-grid,
+  .service-customer-grid,
+  .testimonials-track {
+    grid-template-columns: 1fr;
+  }
+
+  .service-process-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 900px) {
+  .service-process-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-benefits-card {
+    margin-top: 18px;
+    max-width: none;
+  }
+}
+
+@media (max-width: 760px) {
+  .service-page-hero {
+    padding: 132px 0 64px;
+  }
+
+  .service-page-hero h1 {
+    font-size: 2.7rem;
+    line-height: 0.98;
+  }
+
+  .service-page-hero-text,
+  .service-intro-copy p,
+  .service-detail-copy p,
+  .testimonial-card p {
+    font-size: 1rem;
+    line-height: 1.75;
+  }
+
+  .service-page-hero-actions,
+  .service-statement-icons {
+    justify-content: center;
+  }
+
+  .service-page-hero-media {
+    margin-top: 34px;
+    border-radius: 22px;
+  }
+
+  .service-page-hero-media img {
+    height: 280px;
+  }
+
+  .service-intro-card,
+  .service-customer-card,
+  .testimonial-card,
+  .service-needed-box {
+    padding: 22px;
+  }
+
+  .service-statement-wrap,
+  .service-intro-copy,
+  .service-detail-copy,
+  .service-benefits-card,
+  .section-head {
+    text-align: center;
+  }
+
+  .service-needed-box ul,
+  .service-benefits-card ul {
+    text-align: left;
+  }
+
+  .service-detail-image img {
+    min-height: 280px;
+  }
+
+  .testimonials-slider-wrap {
+    padding: 0 46px;
+  }
+
+  .testimonials-track {
+    display: flex;
+    gap: 14px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .testimonials-track::-webkit-scrollbar {
+    display: none;
+  }
+
+  .testimonial-card {
+    flex: 0 0 100%;
+    min-width: 100%;
+    scroll-snap-align: start;
+  }
+
+  .testimonials-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 4;
+    width: 38px;
+    height: 38px;
+    border-radius: 999px;
+    border: 1px solid rgba(255,255,255,0.12);
+    background: #111214;
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  .testimonials-prev {
+    left: 0;
+  }
+
+  .testimonials-next {
+    right: 0;
+  }
+}
