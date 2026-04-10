@@ -1173,3 +1173,132 @@
     pointer-events: auto;
   }
 }
+
+.mobile-slider-wrap {
+  position: relative;
+}
+
+.mobile-slider-controls {
+  position: relative;
+  z-index: 20;
+}
+
+.mobile-card-arrow {
+  position: relative;
+  z-index: 21;
+  pointer-events: auto;
+  flex-shrink: 0;
+}
+
+.mobile-card-viewport,
+.mobile-card-track {
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 760px) {
+  .mobile-slider-controls {
+    margin-top: 18px;
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+  }
+}
+
+.mobile-slider-wrap {
+  position: relative;
+  z-index: 1;
+}
+
+.mobile-card-viewport {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  width: 100%;
+}
+
+.mobile-slider-controls {
+  position: relative;
+  z-index: 50;
+}
+
+.mobile-card-arrow {
+  position: relative;
+  z-index: 60;
+  pointer-events: auto;
+  user-select: none;
+}
+
+.mobile-card-arrow i {
+  pointer-events: none;
+}
+
+@media (max-width: 760px) {
+  .mobile-slider-controls {
+    margin-top: 18px;
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+  }
+
+  .mobile-card-track {
+    display: flex !important;
+    gap: 14px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .mobile-card-track::-webkit-scrollbar {
+    display: none;
+  }
+
+  .service-intro-card,
+  .testimonial-card {
+    flex: 0 0 100%;
+    min-width: 100%;
+    scroll-snap-align: start;
+  }
+}
+
+@media (max-width: 760px) {
+  .mobile-card-viewport {
+    overflow: hidden;
+  }
+
+  .mobile-card-track {
+    align-items: stretch;
+  }
+
+  .mobile-card-arrow {
+    flex: 0 0 auto;
+    position: relative;
+    z-index: 70;
+    pointer-events: auto;
+  }
+}
+
+/* Mobile slider click fix */
+.mobile-slider-wrap {
+  position: relative;
+}
+
+.mobile-slider-controls {
+  position: relative;
+  z-index: 20;
+}
+
+.mobile-card-arrow {
+  position: relative;
+  z-index: 21;
+  pointer-events: auto;
+  flex-shrink: 0;
+}
+
+.mobile-card-viewport,
+.mobile-card-track {
+  position: relative;
+  z-index: 1;
+}
