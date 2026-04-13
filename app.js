@@ -562,3 +562,27 @@ function showSweetAlertError(field, message) {
     field.focus();
   });
 }
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const testimonialToggles = document.querySelectorAll(".testimonial-toggle");
+
+  testimonialToggles.forEach((toggle) => {
+    toggle.addEventListener("click", function () {
+      const review = this.previousElementSibling;
+      if (!review || !review.classList.contains("testimonial-review")) return;
+
+      const isCollapsed = review.classList.contains("is-collapsed");
+
+      if (isCollapsed) {
+        review.classList.remove("is-collapsed");
+        this.textContent = "Read less";
+        this.setAttribute("aria-expanded", "true");
+      } else {
+        review.classList.add("is-collapsed");
+        this.textContent = "Read more";
+        this.setAttribute("aria-expanded", "false");
+      }
+    });
+  });
+});

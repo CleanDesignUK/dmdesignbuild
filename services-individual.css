@@ -1302,3 +1302,47 @@
   position: relative;
   z-index: 1;
 }
+
+.testimonial-review {
+  position: relative;
+}
+
+.testimonial-review.is-collapsed {
+  max-height: 7.2em;
+  overflow: hidden;
+}
+
+.testimonial-review.is-collapsed::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2.8em;
+  background: linear-gradient(to bottom, rgba(16, 17, 18, 0), rgba(16, 17, 18, 1));
+  pointer-events: none;
+}
+
+.testimonial-toggle {
+  margin: 0 0 18px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--service-silver);
+  font: inherit;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.testimonial-toggle:hover {
+  color: #fff;
+}
+
+.testimonial-toggle:focus-visible {
+  outline: 2px solid rgba(255,255,255,0.35);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
