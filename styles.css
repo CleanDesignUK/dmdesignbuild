@@ -1037,8 +1037,12 @@ select option {
   }
 
   .brand-copy {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.05;
+    min-width: 0;
   }
+
 
   .brand-logo {
     width: 46px;
@@ -1449,4 +1453,33 @@ select option {
 }
 .hidden-botcheck {
   display: none !important;
+}
+
+@media (max-width: 980px) {
+  .brand-copy {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.05;
+    min-width: 0;
+  }
+
+  .brand {
+    min-width: 0;
+    gap: 10px;
+  }
+
+  .brand-name {
+    font-size: 0.9rem;
+    line-height: 1.1;
+  }
+
+  .brand-copy small {
+    display: none;
+  }
+}
+
+@media (max-width: 760px) {
+  .brand-name {
+    font-size: 0.8rem;
+  }
 }
