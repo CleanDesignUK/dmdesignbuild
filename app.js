@@ -205,6 +205,16 @@ function showFieldError(field, message) {
   field.focus();
 }
 
+function showSweetAlertError(field, message) {
+  Swal.fire({
+    icon: 'error',
+    title: 'Please check the form',
+    text: message
+  }).then(() => {
+    if (field) field.focus();
+  });
+}
+
 function initForms() {
   const forms = document.querySelectorAll('.quote-form');
 
@@ -226,14 +236,13 @@ function initForms() {
       const areaInput = form.querySelector('input[name="area"]');
       const serviceInput = form.querySelector('select[name="service"]');
       const submitButton = form.querySelector('button[type="submit"]');
-
       const honeypot = form.querySelector('input[name="botcheck"]');
 
       if (honeypot && honeypot.checked) {
         return;
       }
 
-      if (timeTaken < 2500) {
+      if (timeTaken < 800) {
         Swal.fire({
           icon: 'warning',
           title: 'Please try again',
@@ -303,7 +312,12 @@ function initForms() {
           body: formData
         });
 
-        const result = await response.json();
+        let result = {};
+        try {
+          result = await response.json();
+        } catch (jsonError) {
+          result = {};
+        }
 
         if (response.ok && result.success) {
           await Swal.fire({
@@ -316,15 +330,21 @@ function initForms() {
           form.reset();
           form.dataset.loadedAt = String(Date.now());
         } else {
-          throw new Error(result.message || 'Something went wrong.');
+          await Swal.fire({
+            icon: 'error',
+            title: 'Submission failed',
+            text: result.message || `Form failed with status ${response.status}.`
+          });
+
+          console.error('Web3Forms error:', result);
         }
       } catch (error) {
-        console.error(error);
+        console.error('Network or fetch error:', error);
 
-        Swal.fire({
+        await Swal.fire({
           icon: 'error',
           title: 'Submission failed',
-          text: 'Something went wrong while sending your enquiry. Please try again.'
+          text: 'Network error or request blocked. Please try again.'
         });
       } finally {
         if (submitButton) {
@@ -551,37 +571,24 @@ document.addEventListener('DOMContentLoaded', async () => {
   initGalleryLightbox();
   initServicePageMobileSliders();
   initExtensionFloatingForm();
-});
 
-function showSweetAlertError(field, message) {
-  Swal.fire({
-    icon: 'error',
-    title: 'Please check the form',
-    text: message
-  }).then(() => {
-    field.focus();
-  });
-}
-
-
-document.addEventListener("DOMContentLoaded", function () {
-  const testimonialToggles = document.querySelectorAll(".testimonial-toggle");
+  const testimonialToggles = document.querySelectorAll('.testimonial-toggle');
 
   testimonialToggles.forEach((toggle) => {
-    toggle.addEventListener("click", function () {
+    toggle.addEventListener('click', function () {
       const review = this.previousElementSibling;
-      if (!review || !review.classList.contains("testimonial-review")) return;
+      if (!review || !review.classList.contains('testimonial-review')) return;
 
-      const isCollapsed = review.classList.contains("is-collapsed");
+      const isCollapsed = review.classList.contains('is-collapsed');
 
       if (isCollapsed) {
-        review.classList.remove("is-collapsed");
-        this.textContent = "Read less";
-        this.setAttribute("aria-expanded", "true");
+        review.classList.remove('is-collapsed');
+        this.textContent = 'Read less';
+        this.setAttribute('aria-expanded', 'true');
       } else {
-        review.classList.add("is-collapsed");
-        this.textContent = "Read more";
-        this.setAttribute("aria-expanded", "false");
+        review.classList.add('is-collapsed');
+        this.textContent = 'Read more';
+        this.setAttribute('aria-expanded', 'false');
       }
     });
   });
